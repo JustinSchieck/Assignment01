@@ -227,7 +227,7 @@
             this.SpanishOption.Text = "Espanol";
             this.SpanishOption.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Assignment01Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -251,7 +251,7 @@
             this.Controls.Add(this.GermanOption);
             this.Controls.Add(this.FrenchOption);
             this.Controls.Add(this.EnglishOption);
-            this.Name = "Form1";
+            this.Name = "Assignment01Form";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
