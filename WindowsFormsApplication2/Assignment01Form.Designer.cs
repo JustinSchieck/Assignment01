@@ -32,11 +32,11 @@
             this.EnglishOption = new System.Windows.Forms.RadioButton();
             this.FrenchOption = new System.Windows.Forms.RadioButton();
             this.GermanOption = new System.Windows.Forms.RadioButton();
-            this.EmployeeName = new System.Windows.Forms.TextBox();
-            this.EmployeeId = new System.Windows.Forms.TextBox();
-            this.hoursWorked = new System.Windows.Forms.TextBox();
-            this.TotalSales = new System.Windows.Forms.TextBox();
-            this.SalesBonus = new System.Windows.Forms.TextBox();
+            this.EmployeeNameTextBox = new System.Windows.Forms.TextBox();
+            this.EmployeeIdTextBox = new System.Windows.Forms.TextBox();
+            this.HoursWorkedTextBox = new System.Windows.Forms.TextBox();
+            this.TotalSalesTextBox = new System.Windows.Forms.TextBox();
+            this.SalesBonusTextBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
             this.HoursLabel = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.PrintBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Languagelbl = new System.Windows.Forms.Label();
+            this.Languagelabel = new System.Windows.Forms.Label();
             this.SpanishOption = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.EnglishOption.TabStop = true;
             this.EnglishOption.Text = "English";
             this.EnglishOption.UseVisualStyleBackColor = true;
+            this.EnglishOption.CheckedChanged += new System.EventHandler(this.EnglishOption_CheckedChanged);
             // 
             // FrenchOption
             // 
@@ -72,6 +73,7 @@
             this.FrenchOption.TabStop = true;
             this.FrenchOption.Text = "Francais";
             this.FrenchOption.UseVisualStyleBackColor = true;
+            this.FrenchOption.CheckedChanged += new System.EventHandler(this.FrenchOption_CheckedChanged);
             // 
             // GermanOption
             // 
@@ -83,43 +85,44 @@
             this.GermanOption.TabStop = true;
             this.GermanOption.Text = "Deutsch";
             this.GermanOption.UseVisualStyleBackColor = true;
+            this.GermanOption.CheckedChanged += new System.EventHandler(this.GermanOption_CheckedChanged);
             // 
-            // EmployeeName
+            // EmployeeNameTextBox
             // 
-            this.EmployeeName.Location = new System.Drawing.Point(227, 210);
-            this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(219, 22);
-            this.EmployeeName.TabIndex = 3;
-            this.EmployeeName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.EmployeeNameTextBox.Location = new System.Drawing.Point(227, 210);
+            this.EmployeeNameTextBox.Name = "EmployeeNameTextBox";
+            this.EmployeeNameTextBox.Size = new System.Drawing.Size(219, 22);
+            this.EmployeeNameTextBox.TabIndex = 3;
+            this.EmployeeNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // EmployeeId
+            // EmployeeIdTextBox
             // 
-            this.EmployeeId.Location = new System.Drawing.Point(227, 239);
-            this.EmployeeId.Name = "EmployeeId";
-            this.EmployeeId.Size = new System.Drawing.Size(100, 22);
-            this.EmployeeId.TabIndex = 4;
+            this.EmployeeIdTextBox.Location = new System.Drawing.Point(227, 239);
+            this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
+            this.EmployeeIdTextBox.Size = new System.Drawing.Size(100, 22);
+            this.EmployeeIdTextBox.TabIndex = 4;
             // 
-            // hoursWorked
+            // HoursWorkedTextBox
             // 
-            this.hoursWorked.Location = new System.Drawing.Point(227, 269);
-            this.hoursWorked.Name = "hoursWorked";
-            this.hoursWorked.Size = new System.Drawing.Size(100, 22);
-            this.hoursWorked.TabIndex = 5;
+            this.HoursWorkedTextBox.Location = new System.Drawing.Point(227, 269);
+            this.HoursWorkedTextBox.Name = "HoursWorkedTextBox";
+            this.HoursWorkedTextBox.Size = new System.Drawing.Size(100, 22);
+            this.HoursWorkedTextBox.TabIndex = 5;
             // 
-            // TotalSales
+            // TotalSalesTextBox
             // 
-            this.TotalSales.Location = new System.Drawing.Point(227, 302);
-            this.TotalSales.Name = "TotalSales";
-            this.TotalSales.Size = new System.Drawing.Size(100, 22);
-            this.TotalSales.TabIndex = 6;
+            this.TotalSalesTextBox.Location = new System.Drawing.Point(227, 302);
+            this.TotalSalesTextBox.Name = "TotalSalesTextBox";
+            this.TotalSalesTextBox.Size = new System.Drawing.Size(100, 22);
+            this.TotalSalesTextBox.TabIndex = 6;
             // 
-            // SalesBonus
+            // SalesBonusTextBox
             // 
-            this.SalesBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesBonus.Location = new System.Drawing.Point(227, 330);
-            this.SalesBonus.Name = "SalesBonus";
-            this.SalesBonus.Size = new System.Drawing.Size(100, 22);
-            this.SalesBonus.TabIndex = 7;
+            this.SalesBonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesBonusTextBox.Location = new System.Drawing.Point(227, 330);
+            this.SalesBonusTextBox.Name = "SalesBonusTextBox";
+            this.SalesBonusTextBox.Size = new System.Drawing.Size(100, 22);
+            this.SalesBonusTextBox.TabIndex = 7;
             // 
             // NameLabel
             // 
@@ -180,6 +183,7 @@
             this.CalculateBtn.TabIndex = 13;
             this.CalculateBtn.Text = "Calculate";
             this.CalculateBtn.UseVisualStyleBackColor = true;
+            this.CalculateBtn.Click += new System.EventHandler(this.CalculateBtn_Click);
             // 
             // PrintBtn
             // 
@@ -209,15 +213,15 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // Languagelbl
+            // Languagelabel
             // 
-            this.Languagelbl.AutoSize = true;
-            this.Languagelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Languagelbl.Location = new System.Drawing.Point(260, 9);
-            this.Languagelbl.Name = "Languagelbl";
-            this.Languagelbl.Size = new System.Drawing.Size(90, 20);
-            this.Languagelbl.TabIndex = 17;
-            this.Languagelbl.Text = "Language";
+            this.Languagelabel.AutoSize = true;
+            this.Languagelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Languagelabel.Location = new System.Drawing.Point(260, 9);
+            this.Languagelabel.Name = "Languagelabel";
+            this.Languagelabel.Size = new System.Drawing.Size(90, 20);
+            this.Languagelabel.TabIndex = 17;
+            this.Languagelabel.Text = "Language";
             // 
             // SpanishOption
             // 
@@ -229,6 +233,7 @@
             this.SpanishOption.TabStop = true;
             this.SpanishOption.Text = "Espanol";
             this.SpanishOption.UseVisualStyleBackColor = true;
+            this.SpanishOption.CheckedChanged += new System.EventHandler(this.SpanishOption_CheckedChanged);
             // 
             // Assignment01Form
             // 
@@ -236,7 +241,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 453);
             this.Controls.Add(this.SpanishOption);
-            this.Controls.Add(this.Languagelbl);
+            this.Controls.Add(this.Languagelabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.PrintBtn);
@@ -246,11 +251,11 @@
             this.Controls.Add(this.HoursLabel);
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.SalesBonus);
-            this.Controls.Add(this.TotalSales);
-            this.Controls.Add(this.hoursWorked);
-            this.Controls.Add(this.EmployeeId);
-            this.Controls.Add(this.EmployeeName);
+            this.Controls.Add(this.SalesBonusTextBox);
+            this.Controls.Add(this.TotalSalesTextBox);
+            this.Controls.Add(this.HoursWorkedTextBox);
+            this.Controls.Add(this.EmployeeIdTextBox);
+            this.Controls.Add(this.EmployeeNameTextBox);
             this.Controls.Add(this.GermanOption);
             this.Controls.Add(this.FrenchOption);
             this.Controls.Add(this.EnglishOption);
@@ -268,11 +273,11 @@
         private System.Windows.Forms.RadioButton EnglishOption;
         private System.Windows.Forms.RadioButton FrenchOption;
         private System.Windows.Forms.RadioButton GermanOption;
-        private System.Windows.Forms.TextBox EmployeeName;
-        private System.Windows.Forms.TextBox EmployeeId;
-        private System.Windows.Forms.TextBox hoursWorked;
-        private System.Windows.Forms.TextBox TotalSales;
-        private System.Windows.Forms.TextBox SalesBonus;
+        private System.Windows.Forms.TextBox EmployeeNameTextBox;
+        private System.Windows.Forms.TextBox EmployeeIdTextBox;
+        private System.Windows.Forms.TextBox HoursWorkedTextBox;
+        private System.Windows.Forms.TextBox TotalSalesTextBox;
+        private System.Windows.Forms.TextBox SalesBonusTextBox;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.Label HoursLabel;
@@ -282,7 +287,7 @@
         private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label Languagelbl;
+        private System.Windows.Forms.Label Languagelabel;
         private System.Windows.Forms.RadioButton SpanishOption;
     }
 }
