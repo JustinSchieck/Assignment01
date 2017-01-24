@@ -145,7 +145,80 @@ namespace WindowsFormsApplication2
             }      
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void HoursWorkedTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int HoursWorked;
+                HoursWorked = Convert.ToInt32(HoursWorkedTextBox);
+
+                if (HoursWorked > 160)
+                {
+                    MessageBox.Show("Hours cannot exceed 160");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Invalid Data", "Input Error");
+                Debug.WriteLine(exception.Message);
+
+                HoursWorkedTextBox.Focus();
+                HoursWorkedTextBox.SelectAll();
+                ResetHoursWorkedTextBox();
+            }
+        }
+
+        private void ResetHoursWorkedTextBox()
+        {
+            HoursWorkedTextBox.Focus();
+            HoursWorkedTextBox.Text = "0";
+            HoursWorkedTextBox.SelectAll();
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            ResetText();
+        }
+
+        private void ResetText()
+        {
+            HoursWorkedTextBox.Focus();
+            HoursWorkedTextBox.Text = "";
+            HoursWorkedTextBox.SelectAll();
+
+            EmployeeNameTextBox.Focus();
+            EmployeeNameTextBox.Text = "";
+            EmployeeNameTextBox.SelectAll();
+
+            EmployeeIdTextBox.Focus();
+            EmployeeIdTextBox.Text = "";
+            EmployeeIdTextBox.SelectAll();
+
+            SalesBonusTextBox.Focus();
+            SalesBonusTextBox.Text = "";
+            SalesBonusTextBox.SelectAll();
+        }
+
+        private void ResetHoursWorked()
+        {
+            HoursWorkedTextBox.Focus();
+            HoursWorkedTextBox.Text = "0";
+            HoursWorkedTextBox.SelectAll();
+        }
+
+        private void PrintBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sending to Printer...");
+        }
+
+        private String PrintMessage()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

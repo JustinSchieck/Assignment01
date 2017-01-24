@@ -108,6 +108,7 @@
             this.HoursWorkedTextBox.Name = "HoursWorkedTextBox";
             this.HoursWorkedTextBox.Size = new System.Drawing.Size(100, 22);
             this.HoursWorkedTextBox.TabIndex = 5;
+            this.HoursWorkedTextBox.TextChanged += new System.EventHandler(this.HoursWorkedTextBox_TextChanged);
             // 
             // TotalSalesTextBox
             // 
@@ -193,6 +194,7 @@
             this.PrintBtn.TabIndex = 14;
             this.PrintBtn.Text = "Print";
             this.PrintBtn.UseVisualStyleBackColor = true;
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // ClearBtn
             // 
@@ -202,6 +204,7 @@
             this.ClearBtn.TabIndex = 15;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = true;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // pictureBox1
             // 
@@ -212,6 +215,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Languagelabel
             // 
