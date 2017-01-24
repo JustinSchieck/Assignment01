@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,6 +75,52 @@ namespace WindowsFormsApplication2
 
                     Languagelabel.Text = "Language";
                     break;
+
+                case "Francais":
+                    NameLabel.Text = "Nom de l'employé: ";
+                    IdLabel.Text = "ID employé: ";
+                    HoursLabel.Text = "Heures travaillées: ";
+                    TotalSalesLabel.Text = "Ventes totales: ";
+                    SalesBonusLabel.Text = "Bonus de vente: ";
+
+
+                    CalculateBtn.Text = "Calculer";
+                    PrintBtn.Text = "Impression";
+                    ClearBtn.Text = "Clair";
+
+                    Languagelabel.Text = "La langue";
+                    break;
+
+                case "Deutsch":
+                    NameLabel.Text = "Mitarbeitername: ";
+                    IdLabel.Text = "Angestellten ID: ";
+                    HoursLabel.Text = "Arbeitsstunden: ";
+                    TotalSalesLabel.Text = "Gesamtumsatz: ";
+                    SalesBonusLabel.Text = "Verkaufsbonus: ";
+
+
+                    CalculateBtn.Text = "Berechnen";
+                    PrintBtn.Text = "Drucken";
+                    ClearBtn.Text = "Klar";
+
+                    Languagelabel.Text = "Sprache";
+                    break;
+
+
+                case "Espanol":
+                    NameLabel.Text = "Nombre de empleado: ";
+                    IdLabel.Text = "ID de empleado: ";
+                    HoursLabel.Text = "Horas trabajadas: ";
+                    TotalSalesLabel.Text = "Ventas totales: ";
+                    SalesBonusLabel.Text = "Bono de ventas: ";
+
+
+                    CalculateBtn.Text = "Calcular";
+                    PrintBtn.Text = "Impresión";
+                    ClearBtn.Text = "Claro";
+
+                    Languagelabel.Text = "Idioma";
+                    break;
             }
         }
 
@@ -143,6 +190,20 @@ namespace WindowsFormsApplication2
                 Debug.WriteLine(exception.Message);
 
             }      
+        }
+
+        private void TotalSalesTextBox_TextChanged(object sender, EventArgs e)
+        {
+            {
+                string value = TotalSalesTextBox.Text.Replace(",","").Replace("$","");
+                decimal ul;
+                if (decimal.TryParse(value, out ul))
+                {
+                    TotalSalesTextBox.TextChanged -= TotalSalesTextBox_TextChanged;
+                    TotalSalesTextBox.Text = string.Format(CultureInfo.CreateSpecificCulture("en-US"), "{0:C2}", ul);
+                    TotalSalesTextBox.TextChanged += TotalSalesTextBox_TextChanged;
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
