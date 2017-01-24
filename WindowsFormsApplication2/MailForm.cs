@@ -54,7 +54,7 @@ namespace WindowsFormsApplication2
         }
 
 
-        //Language Code for multiple languages including english, french, german and spanish
+        //Language Code EventHandler
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
           
