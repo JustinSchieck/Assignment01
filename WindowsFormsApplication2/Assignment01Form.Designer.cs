@@ -32,11 +32,11 @@
             this.EnglishOption = new System.Windows.Forms.RadioButton();
             this.FrenchOption = new System.Windows.Forms.RadioButton();
             this.GermanOption = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.EmployeeName = new System.Windows.Forms.TextBox();
+            this.EmployeeId = new System.Windows.Forms.TextBox();
+            this.hoursWorked = new System.Windows.Forms.TextBox();
+            this.TotalSales = new System.Windows.Forms.TextBox();
+            this.SalesBonus = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.IdLabel = new System.Windows.Forms.Label();
             this.HoursLabel = new System.Windows.Forms.Label();
@@ -84,40 +84,42 @@
             this.GermanOption.Text = "Deutsch";
             this.GermanOption.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // EmployeeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(227, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 22);
-            this.textBox1.TabIndex = 3;
+            this.EmployeeName.Location = new System.Drawing.Point(227, 210);
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Size = new System.Drawing.Size(219, 22);
+            this.EmployeeName.TabIndex = 3;
+            this.EmployeeName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // EmployeeId
             // 
-            this.textBox2.Location = new System.Drawing.Point(227, 239);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.EmployeeId.Location = new System.Drawing.Point(227, 239);
+            this.EmployeeId.Name = "EmployeeId";
+            this.EmployeeId.Size = new System.Drawing.Size(100, 22);
+            this.EmployeeId.TabIndex = 4;
             // 
-            // textBox3
+            // hoursWorked
             // 
-            this.textBox3.Location = new System.Drawing.Point(227, 269);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.hoursWorked.Location = new System.Drawing.Point(227, 269);
+            this.hoursWorked.Name = "hoursWorked";
+            this.hoursWorked.Size = new System.Drawing.Size(100, 22);
+            this.hoursWorked.TabIndex = 5;
             // 
-            // textBox4
+            // TotalSales
             // 
-            this.textBox4.Location = new System.Drawing.Point(227, 302);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 6;
+            this.TotalSales.Location = new System.Drawing.Point(227, 302);
+            this.TotalSales.Name = "TotalSales";
+            this.TotalSales.Size = new System.Drawing.Size(100, 22);
+            this.TotalSales.TabIndex = 6;
             // 
-            // textBox5
+            // SalesBonus
             // 
-            this.textBox5.Location = new System.Drawing.Point(227, 330);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 7;
+            this.SalesBonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesBonus.Location = new System.Drawing.Point(227, 330);
+            this.SalesBonus.Name = "SalesBonus";
+            this.SalesBonus.Size = new System.Drawing.Size(100, 22);
+            this.SalesBonus.TabIndex = 7;
             // 
             // NameLabel
             // 
@@ -162,9 +164,10 @@
             // SalesBonusLabel
             // 
             this.SalesBonusLabel.AutoSize = true;
+            this.SalesBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalesBonusLabel.Location = new System.Drawing.Point(80, 335);
             this.SalesBonusLabel.Name = "SalesBonusLabel";
-            this.SalesBonusLabel.Size = new System.Drawing.Size(91, 17);
+            this.SalesBonusLabel.Size = new System.Drawing.Size(103, 17);
             this.SalesBonusLabel.TabIndex = 12;
             this.SalesBonusLabel.Text = "Sales Bonus:";
             this.SalesBonusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,9 +202,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(63, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(165, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -243,16 +246,17 @@
             this.Controls.Add(this.HoursLabel);
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SalesBonus);
+            this.Controls.Add(this.TotalSales);
+            this.Controls.Add(this.hoursWorked);
+            this.Controls.Add(this.EmployeeId);
+            this.Controls.Add(this.EmployeeName);
             this.Controls.Add(this.GermanOption);
             this.Controls.Add(this.FrenchOption);
             this.Controls.Add(this.EnglishOption);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Assignment01Form";
-            this.Text = "Form1";
+            this.Text = "Sales Bonus Calculator";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,11 +268,11 @@
         private System.Windows.Forms.RadioButton EnglishOption;
         private System.Windows.Forms.RadioButton FrenchOption;
         private System.Windows.Forms.RadioButton GermanOption;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox EmployeeName;
+        private System.Windows.Forms.TextBox EmployeeId;
+        private System.Windows.Forms.TextBox hoursWorked;
+        private System.Windows.Forms.TextBox TotalSales;
+        private System.Windows.Forms.TextBox SalesBonus;
         private System.Windows.Forms.Label NameLabel;
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.Label HoursLabel;
