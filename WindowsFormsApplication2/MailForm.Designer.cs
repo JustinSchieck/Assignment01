@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication2
 {
-    partial class Assignment01Form
+    partial class MailForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Assignment01Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MailForm));
             this.EnglishOption = new System.Windows.Forms.RadioButton();
             this.FrenchOption = new System.Windows.Forms.RadioButton();
             this.GermanOption = new System.Windows.Forms.RadioButton();
@@ -122,13 +122,14 @@
             this.SalesBonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalesBonusTextBox.Location = new System.Drawing.Point(227, 330);
             this.SalesBonusTextBox.Name = "SalesBonusTextBox";
+            this.SalesBonusTextBox.ReadOnly = true;
             this.SalesBonusTextBox.Size = new System.Drawing.Size(100, 22);
             this.SalesBonusTextBox.TabIndex = 7;
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(60, 215);
+            this.NameLabel.Location = new System.Drawing.Point(56, 210);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(115, 17);
             this.NameLabel.TabIndex = 8;
@@ -138,7 +139,7 @@
             // IdLabel
             // 
             this.IdLabel.AutoSize = true;
-            this.IdLabel.Location = new System.Drawing.Point(84, 245);
+            this.IdLabel.Location = new System.Drawing.Point(80, 239);
             this.IdLabel.Name = "IdLabel";
             this.IdLabel.Size = new System.Drawing.Size(91, 17);
             this.IdLabel.TabIndex = 9;
@@ -148,7 +149,7 @@
             // HoursLabel
             // 
             this.HoursLabel.AutoSize = true;
-            this.HoursLabel.Location = new System.Drawing.Point(68, 274);
+            this.HoursLabel.Location = new System.Drawing.Point(68, 269);
             this.HoursLabel.Name = "HoursLabel";
             this.HoursLabel.Size = new System.Drawing.Size(103, 17);
             this.HoursLabel.TabIndex = 10;
@@ -158,7 +159,7 @@
             // TotalSalesLabel
             // 
             this.TotalSalesLabel.AutoSize = true;
-            this.TotalSalesLabel.Location = new System.Drawing.Point(88, 305);
+            this.TotalSalesLabel.Location = new System.Drawing.Point(88, 302);
             this.TotalSalesLabel.Name = "TotalSalesLabel";
             this.TotalSalesLabel.Size = new System.Drawing.Size(83, 17);
             this.TotalSalesLabel.TabIndex = 11;
@@ -169,7 +170,7 @@
             // 
             this.SalesBonusLabel.AutoSize = true;
             this.SalesBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesBonusLabel.Location = new System.Drawing.Point(80, 335);
+            this.SalesBonusLabel.Location = new System.Drawing.Point(68, 330);
             this.SalesBonusLabel.Name = "SalesBonusLabel";
             this.SalesBonusLabel.Size = new System.Drawing.Size(103, 17);
             this.SalesBonusLabel.TabIndex = 12;
@@ -178,9 +179,9 @@
             // 
             // CalculateBtn
             // 
-            this.CalculateBtn.Location = new System.Drawing.Point(52, 394);
+            this.CalculateBtn.Location = new System.Drawing.Point(29, 394);
             this.CalculateBtn.Name = "CalculateBtn";
-            this.CalculateBtn.Size = new System.Drawing.Size(75, 30);
+            this.CalculateBtn.Size = new System.Drawing.Size(100, 30);
             this.CalculateBtn.TabIndex = 13;
             this.CalculateBtn.Text = "Calculate";
             this.CalculateBtn.UseVisualStyleBackColor = true;
@@ -188,9 +189,9 @@
             // 
             // PrintBtn
             // 
-            this.PrintBtn.Location = new System.Drawing.Point(204, 394);
+            this.PrintBtn.Location = new System.Drawing.Point(189, 394);
             this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(75, 30);
+            this.PrintBtn.Size = new System.Drawing.Size(100, 30);
             this.PrintBtn.TabIndex = 14;
             this.PrintBtn.Text = "Print";
             this.PrintBtn.UseVisualStyleBackColor = true;
@@ -198,9 +199,9 @@
             // 
             // ClearBtn
             // 
-            this.ClearBtn.Location = new System.Drawing.Point(362, 394);
+            this.ClearBtn.Location = new System.Drawing.Point(346, 394);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(75, 30);
+            this.ClearBtn.Size = new System.Drawing.Size(100, 30);
             this.ClearBtn.TabIndex = 15;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = true;
